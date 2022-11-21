@@ -1,13 +1,14 @@
 public class Vehicle {
 
     private int numberOfWheels;
-    private int maximumOccupancy;
+    private int maxOccupancy;
     private double velocity;
-    private String powerType;
+    private PowerType powerType;
 
-    public Vehicle(int numberOfWheels, int maximumOccupancy, double velocity, String powerType){
+    public Vehicle(int numberOfWheels, int maxOccupancy, double velocity, PowerType powerType){
         this.numberOfWheels = numberOfWheels;
-        this.maximumOccupancy = maximumOccupancy;
+        this.maxOccupancy = maxOccupancy;
+        this.velocity = 0;
         this.velocity = velocity;
         this.powerType = powerType;
     }
@@ -18,8 +19,8 @@ public class Vehicle {
 
     // numberOfWheels doesn't need a setter as the number of wheels on the vehicle won't change
 
-    public int getMaximumOccupancy(){
-        return maximumOccupancy;
+    public int getMaxOccupancy(){
+        return maxOccupancy;
     }
 
     // maximumOccupancy doesn't need a setter as the specified max. occupancy in the vehicle won't change
@@ -32,19 +33,20 @@ public class Vehicle {
         this.velocity = velocity;
     }
 
-    public String getPowerType(){
+    public PowerType getPowerType(){
         return powerType;
     }
 
     // powerType doesn't need a setter as what powers the vehicle won't change
 
-    public double accelerate(double velocity){
-        return velocity * 1.5;
+    public double accelerate(){
+        velocity += 15;
+        return velocity;
     }
 
-    public double brake(double velocity){
-        return velocity / 1.5;
+    public double decelerate(){
+        velocity -= 15;
+        return velocity;
     }
-
 
 }
