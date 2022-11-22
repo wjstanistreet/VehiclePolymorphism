@@ -4,13 +4,25 @@ public class Vehicle {
     private int maxOccupancy;
     private double velocity;
     private PowerType powerType;
+    private boolean engineOn;
 
     public Vehicle(int numberOfWheels, int maxOccupancy, double velocity, PowerType powerType){
         this.numberOfWheels = numberOfWheels;
         this.maxOccupancy = maxOccupancy;
-        this.velocity = 0;
         this.velocity = velocity;
         this.powerType = powerType;
+        this.engineOn = false;
+    }
+
+
+    public double accelerate(){
+        velocity += 15;
+        return velocity;
+    }
+
+    public double decelerate(){
+        velocity -= 15;
+        return velocity;
     }
 
     public int getNumberOfWheels() {
@@ -39,14 +51,8 @@ public class Vehicle {
 
     // powerType doesn't need a setter as what powers the vehicle won't change
 
-    public double accelerate(){
-        velocity += 15;
-        return velocity;
-    }
 
-    public double decelerate(){
-        velocity -= 15;
-        return velocity;
+    public boolean isEngineOn() {
+        return engineOn;
     }
-
 }
