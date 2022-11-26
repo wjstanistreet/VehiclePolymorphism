@@ -24,7 +24,4 @@ public class VehicleTest {
         vehicle.decelerate();
         assertThat(vehicle.getVelocity()).isEqualTo(15);
     }
-
-
-
 }

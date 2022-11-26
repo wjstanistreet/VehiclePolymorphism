@@ -4,14 +4,12 @@ public class Vehicle {
     private int maxOccupancy;
     private double velocity;
     private PowerType powerType;
-    private boolean engineOn;
 
     public Vehicle(int numberOfWheels, int maxOccupancy, double velocity, PowerType powerType){
         this.numberOfWheels = numberOfWheels;
         this.maxOccupancy = maxOccupancy;
         this.velocity = velocity;
         this.powerType = powerType;
-        this.engineOn = false;
     }
 
 
@@ -52,7 +50,4 @@ public class Vehicle {
     // powerType doesn't need a setter as what powers the vehicle won't change
 
 
-    public boolean isEngineOn() {
-        return engineOn;
-    }
 }

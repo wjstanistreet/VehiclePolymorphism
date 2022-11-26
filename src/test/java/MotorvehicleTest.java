@@ -5,17 +5,23 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class MotorvehicleTest{
 
-    Vehicle vehicle;
+    Motorvehicle car;
 
     @BeforeEach
     public void setUp(){
-        vehicle = new Vehicle(4, 5, 0.0, PowerType.ELECTRIC);
+        car = new Motorvehicle(4, 5, 0.0, PowerType.ELECTRIC, false);
     }
 
     @Test
-    public void canStartVehicle() {
-        vehicle.ignition();
-        assertThat(vehicle.isEngineOn()).isEqualTo(true);
+    public void canStartEngine() {
+        car.startEngine();
+        assertThat(car.isEngineOn()).isEqualTo(true);
+    }
+
+    @Test
+    public void canStopEngine() {
+        car.stopEngine();
+        assertThat(car.isEngineOn()).isEqualTo(false);
     }
 
 }
