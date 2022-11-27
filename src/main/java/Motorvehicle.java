@@ -10,6 +10,10 @@ public class Motorvehicle extends Vehicle implements IEngine{
         this.engineOn = false;
     }
 
+    public void letPassengersIn(int numberOfWaitingPassengers){
+        numberOfCurrentPassengers = numberOfWaitingPassengers;
+    }
+
     public void startEngine(){
         this.engineOn = true;
     }

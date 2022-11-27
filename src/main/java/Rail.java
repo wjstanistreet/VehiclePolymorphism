@@ -12,6 +12,11 @@ public class Rail extends Vehicle implements IEngine{
         this.engineOn = false;
     }
 
+    public void letPassengersIn(int numberOfWaitingPassengers){
+        numberOfCurrentPassengers = numberOfWaitingPassengers;
+    }
+
+
     // 5. method overload
     public double accelerate(){
         velocity += 50;

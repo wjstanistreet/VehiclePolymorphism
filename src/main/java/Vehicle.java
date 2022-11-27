@@ -6,14 +6,18 @@ public abstract class Vehicle {
     private int maxOccupancy;
     protected double velocity;
     private PowerType powerType;
+    protected int numberOfCurrentPassengers;
 
     public Vehicle(int numberOfWheels, int maxOccupancy, double velocity, PowerType powerType){
         this.numberOfWheels = numberOfWheels;
         this.maxOccupancy = maxOccupancy;
         this.velocity = velocity;
         this.powerType = powerType;
+        this.numberOfCurrentPassengers = 0;
     }
 
+    // 6. abstract method
+    public abstract void letPassengersIn(int numberOfWaitingPassengers);
 
     public double accelerate(){
         velocity += 15;
