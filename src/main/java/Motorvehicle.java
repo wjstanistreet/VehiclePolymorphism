@@ -1,4 +1,5 @@
 public class Motorvehicle extends Vehicle implements IEngine{
+    // 3. extended class 1
 
     private boolean publicTravel;
     private boolean engineOn;

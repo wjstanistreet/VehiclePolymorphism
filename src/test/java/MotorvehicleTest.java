@@ -24,4 +24,17 @@ public class MotorvehicleTest{
         assertThat(car.isEngineOn()).isEqualTo(false);
     }
 
+    @Test
+    public void canAccelerate(){
+        car.accelerate();
+        assertThat(car.getVelocity()).isEqualTo(15);
+    }
+
+    @Test
+    public void canDecelerate(){
+        car.setVelocity(30.0);
+        car.decelerate();
+        assertThat(car.getVelocity()).isEqualTo(15);
+    }
+
 }

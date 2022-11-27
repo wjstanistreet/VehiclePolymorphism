@@ -39,6 +39,4 @@ public class GarageTest {
         assertThat(garage.calculateBacklogHours()).isEqualTo(6);
     }
 
-
-
 }

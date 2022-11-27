@@ -1,8 +1,10 @@
-public class Vehicle {
+public abstract class Vehicle {
+    // 2. Abstract class
+
 
     private int numberOfWheels;
     private int maxOccupancy;
-    private double velocity;
+    protected double velocity;
     private PowerType powerType;
 
     public Vehicle(int numberOfWheels, int maxOccupancy, double velocity, PowerType powerType){

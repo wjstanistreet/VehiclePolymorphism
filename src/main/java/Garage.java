@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Garage {
-
+    // 4. Arraylist with class
     private ArrayList<Motorvehicle> backlog;
 
     public Garage(){
